@@ -28,9 +28,20 @@ In the reverse knowledge distillation (KD) paradigm, different architectures are
 
 The term "reverse" stems from the fact that the student network has an architecture opposite to that of the teacher. This encoder-decoder approach differs from generative models in two main ways: first, the teacher and student are trained separately, with the teacher being frozen during distillation; second, instead of using pixel-level reconstruction error, it detects anomalies in the semantic feature space.
 
+## One-Class Bottleneck Embedding
+
 The primary link between the teacher and student in reverse KD is the OCBE module (One-Class Bottleneck Embedding) (in the figure below). 
 
-<img src="figures/reverse-kd/overview.png" alt="drawing" width="800"/>
+<img src="figures/reverse-kd/overview.png" alt="drawing" width="700"/>
+
+The rich features extracted from the teacher model are often highly redundant, which can hinder the student model when decoding essential anomaly-free features. To address this issue, an OCBE module is introduced to project the teacher’s high-dimensional representations into lower-dimensional ones, preventing the propagation of unusual fluctuations to the student model.
+
+The OCBE module mainly comprises two sub-modules:
+
+- **MFFB**: Concatenates multi-scale representations before projection, achieved through downsampling via convolution layers followed by batch normalization and ReLU activation.
+- **OCEB**: Retains the most essential information for the student model to decode.
+
+<img src="figures/reverse-kd/mff_oce.png" alt="drawing" width="400"/>
 
 
 

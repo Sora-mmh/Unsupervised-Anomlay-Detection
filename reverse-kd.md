@@ -1,3 +1,10 @@
+
+# Demystifying Unsupervised Anomaly Detection: A Review of Key Research Papers
+
+### Source
+[Anomaly Detection via Reverse Distillation From One-Class Embedding](https://openaccess.thecvf.com/content/CVPR2022/html/Deng_Anomaly_Detection_via_Reverse_Distillation_From_One-Class_Embedding_CVPR_2022_paper.html), CVPR 2022
+
+
 ## **What’s Knowledge Distillation (KD) ?**
 
 Knowledge distillation endorse a simpler model (student) which is trained to mimic the behavior of a larger, more complex (not necessarily but mostly pre-trained) model (teacher). The objective is to transfer the knowledge from the teacher model to the student model, enabling the student model to achieve similar performance.
@@ -27,6 +34,3 @@ The primary link between the teacher and student in reverse KD is the OCBE modul
 
 
 
-### Source
-
-[CVPR 2022 Open Access Repository](https://openaccess.thecvf.com/content/CVPR2022/html/Deng_Anomaly_Detection_via_Reverse_Distillation_From_One-Class_Embedding_CVPR_2022_paper.html)

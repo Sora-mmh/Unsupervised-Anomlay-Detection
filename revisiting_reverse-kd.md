@@ -35,17 +35,26 @@ $$
 
 $$
 \textnormal{
-$S_{\epsilon, \rho}(\alpha, \beta)$ : de-biased Sinkhorn divergence between two empirical
-measures $\alpha$ and $\beta$} \\
-\textnormal{$f_{i,k}$ : the feature output of training sample at index i from the $k^{th}$ block of teacher’s encoder} \\
+$S_{\epsilon, \rho}(\alpha, \beta)$ : de-biased Sinkhorn divergence between two empirical measures $\alpha$ and $\beta$}
+$$ 
+
+$$
+\textnormal{$f_{i,k}$ : the feature output of training sample at index i from the $k^{th}$ block of teacher’s encoder} $$ 
+
+
+$$
 \textnormal{$\phi_{k}$ : be
 the projection layer at block k
-th of teacher’s encoder output} \\
-\textnormal{$\sigma$ : be
-softmax function} \\
-\textnormal{$\pi$ : be the transportation plan} \\
-\textnormal{C  : denotes some ground cost to transport a unit of mass between
-probability distributions $\alpha$ and $\beta$ }
+th of teacher’s encoder output} $$ 
+
+$$
+\textnormal{$\sigma$ : be softmax function} $$ 
+
+$$
+\textnormal{$\pi$ : be the transportation plan} $$ 
+
+$$
+\textnormal{C  : denotes some ground cost to transport a unit of mass between probability distributions $\alpha$ and $\beta$ }
 $$
 
 - The third component involves reconstruction, where normal images are recovered from simplex noisy images (pseudo-anomalous images) during training :

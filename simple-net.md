@@ -62,7 +62,7 @@ $$
 $$
 
 $$
-\textnormal{$q_{h,w}^i$ = $\it{G}_{\theta}$ $(o_{h,w}^i)$}
+\textnormal{The output is $q_{h,w}^i = \it{G}_{\theta}(o_{h,w}^i)$}
 $$
 
 

@@ -31,13 +31,13 @@ $$
 
 $$
 L_{SSOT} = \frac{1}{m} \frac{1}{K} \sum_{i,j = 1}^{m} \sum_{k = 1}^{K} S_{\epsilon, \rho} (\sigma (\phi_{k}(f_{i,k}), \sigma (\phi_{k}(f_{j,k})) \\[0.5cm] 
+$$
 
+$$
 \textnormal{
 $S_{\epsilon, \rho}(\alpha, \beta)$ : de-biased Sinkhorn divergence between two empirical
 measures $\alpha$ and $\beta$} \\
-
 \textnormal{$f_{i,k}$ : the feature output of training sample at index i from the $k^{th}$ block of teacher’s encoder} \\
-
 \textnormal{$\phi_{k}$ : be
 the projection layer at block k
 th of teacher’s encoder output} \\
@@ -46,15 +46,18 @@ softmax function} \\
 \textnormal{$\pi$ : be the transportation plan} \\
 \textnormal{C  : denotes some ground cost to transport a unit of mass between
 probability distributions $\alpha$ and $\beta$ }
-
 $$
 
 - The third component involves reconstruction, where normal images are recovered from simplex noisy images (pseudo-anomalous images) during training :
 $$
 L_{Recon} = \frac{1}{K} \sum_{k=1}^{K} (1 - \cos(\phi_{k}(f_{i, k}), \phi_{k}(\tilde{f}_{i, k}))) \\[0.5cm]
+$$
 
+$$
 \textnormal{$f_{i,k}$ = $E^k(x_i)$, the feature output of the $k^{th}$ block of the encoder $E$ given a normal image $x_i$} \\
+$$
 
+$$
 \textnormal{$\tilde{f}_{i,k}$ = $E^k(\xi(x_i))$, the feature output of the $k^{th}$ block of the encoder $E$ given a pseudo-abnormal image $\xi(x_i)$}
 $$
     

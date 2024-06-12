@@ -61,7 +61,13 @@ $$
 \textnormal{The feature adaptor $\it{G}_\theta$ is made of fully-connected layers:}
 $$
 
-$$ q_{h,w}^i = \it{G}_\theta (o_{h,w}^i) $$
+$$
+q_{h,w}^i = \it{G}_\theta (o_{h,w}^i)
+$$
+
+$$
+\textnormal{$F = f_{cat} \circ resize \circ f_{agg}$}
+$$
 
 ### Anomalous Feature Generator
 

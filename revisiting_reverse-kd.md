@@ -50,15 +50,15 @@ probability distributions $\alpha$ and $\beta$ }
 $$
 
 - The third component involves reconstruction, where normal images are recovered from simplex noisy images (pseudo-anomalous images) during training :
-    
+    ```math
     $$
     L_{Recon} = \frac{1}{K} \sum_{k=1}^{K} (1 - \cos(\phi_{k}(f_{i, k}), \phi_{k}(\tilde{f}_{i, k}))) \\[0.5cm]
     
     \textnormal{$f_{i,k}$ = $E^k(x_i)$, the feature output of the $k^{th}$ block of the encoder $E$ given a normal image $x_i$} \\
     
     \textnormal{$\tilde{f}_{i,k}$ = $E^k(\xi(x_i))$, the feature output of the $k^{th}$ block of the encoder $E$ given a pseudo-abnormal image $\xi(x_i)$}
-    
     $$
+    ```
     
 
 - The last component involves contrast loss to strengthen the compact learning of projection layers on normal images. This is achieved by forcing the projection layer to focus on exploring deeper representations of normal features while pushing away abnormal information from the projected normal space.

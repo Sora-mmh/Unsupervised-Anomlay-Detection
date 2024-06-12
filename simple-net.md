@@ -62,7 +62,7 @@ $$
 $$
 
 $$
-\textnormal{$q_{h,w}^i = \it{G}_\theta (o_{h,w}^i)$}
+q_{h,w}^i = \it{G}_\theta (o_{h,w}^i)
 $$
 
 ### Anomalous Feature Generator

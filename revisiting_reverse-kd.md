@@ -66,8 +66,8 @@ $$
     L_{Con} = \frac{1}{K} \sum_{k=1}^{K} \max(0, \cos(\phi_{k}(f_{i,k}), \tilde{f}_{i,k}) - f)
     $$
     
-     : 
+
     
-    Here's an overview of training one epoch of the entire chain:
+Here's an overview of training one epoch of the entire chain:
+<img src="figures/revisiting-kd/algo.png" alt="drawing" width="600"/>
     
-    <img src="figures/revisiting-kd/algo.png" alt="drawing" width="1000"/>

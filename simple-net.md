@@ -58,9 +58,11 @@ $$
 Knowing that real application data distribution are quite different from those of dataset on which the feature extractor was pre-trained, the authors propose a feature adaptor to transfer training features to the target domain.  
 
 $$
-\textnormal{The feature adaptor $\it{G}_\theta$ is made of fully-connected layers:} \\
+\textnormal{The feature adaptor $\it{G}_\theta$ is made of fully-connected layers:}
+$$
 
-\textnormal{q_{h,w}^i = \it{G}_\theta(o_{h,w}^i)}
+$$
+\textnormal{$q_{h,w}^i = \it{G}_\theta (o_{h,w}^i)$}
 $$
 
 ### Anomalous Feature Generator

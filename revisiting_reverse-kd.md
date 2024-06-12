@@ -73,13 +73,15 @@ $$
     
     
 
-- The last component involves contrast loss to strengthen the compact learning of projection layers on normal images. This is achieved by forcing the projection layer to focus on exploring deeper representations of normal features while pushing away abnormal information from the projected normal space.
+- The last component involves contrast loss to strengthen the compact learning of projection layers on normal images. This is achieved by forcing the projection layer to focus on exploring deeper representations of normal features while pushing away abnormal information from the projected normal space. 
     
 $$
 L_{Con} = \frac{1}{K} \sum_{k=1}^{K} \max(0, \cos(\phi_{k}(f_{i,k}), \tilde{f}_{i,k}) - f)
 $$
     
-
+$$
+\textnormal{$f$ : a margin in the cosine embedding loss}
+$$
     
 Here's an overview of training one epoch of the entire chain:
 <img src="figures/revisiting-kd/algo.png" alt="drawing" width="600"/>

@@ -62,12 +62,9 @@ $$
 $$
 
 $$
-\textnormal{$q_{h,w}^i = \it{G}_\theta (o_{h,w}^i)$}
+\textnormal{$q_{h,w}^i$ = $\it{G}_\theta (o_{h,w}^i)$}
 $$
 
-$$
-\textnormal{$F = f_{cat} \circ resize \circ f_{agg}$}
-$$
 
 ### Anomalous Feature Generator
 

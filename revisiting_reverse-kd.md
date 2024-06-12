@@ -30,7 +30,7 @@ $$
     - The optimal transport loss aims to make the projected embeddings after the projection layers close to each other. To achieve this, the authors utilized the **de-biased Sinkhorn divergence, a variant of the Optimal Transport Distance.** This distance measure allows the calculation of the spatial discrepancy between two distributions of feature spaces (normal images).
 
 $$
-L_{SSOT} = \frac{1}{m} \frac{1}{K} \sum_{i,j = 1}^{m} \sum_{k = 1}^{K} S_{\epsilon, \rho} (\sigma (\phi_{k}(f_{i,k}), \sigma (\phi_{k}(f_{j,k})) \\[0.5cm] 
+L_{SSOT} = \frac{1}{m} \frac{1}{K} \sum_{i,j = 1}^{m} \sum_{k = 1}^{K} S_{\epsilon, \rho} (\sigma (\phi_{k}(f_{i,k}), \sigma (\phi_{k}(f_{j,k})) 
 $$
 
 $$
@@ -58,12 +58,13 @@ $$
 $$
 
 - The third component involves reconstruction, where normal images are recovered from simplex noisy images (pseudo-anomalous images) during training :
+
 $$
-L_{Recon} = \frac{1}{K} \sum_{k=1}^{K} (1 - \cos(\phi_{k}(f_{i, k}), \phi_{k}(\tilde{f}_{i, k}))) \\[0.5cm]
+L_{Recon} = \frac{1}{K} \sum_{k=1}^{K} (1 - \cos(\phi_{k}(f_{i, k}),\phi_{k}(\tilde{f}_{i, k})))
 $$
 
 $$
-\textnormal{$f_{i,k}$ = $E^k(x_i)$, the feature output of the $k^{th}$ block of the encoder $E$ given a normal image $x_i$} \\
+\textnormal{$f_{i,k}$ = $E^k(x_i)$, the feature output of the $k^{th}$ block of the encoder $E$ given a normal image $x_i$}
 $$
 
 $$

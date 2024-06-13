@@ -58,7 +58,7 @@ $$
 Knowing that real application data distribution are quite different from those of dataset on which the feature extractor was pre-trained, the authors propose a feature adaptor to transfer training features to the target domain.  
 
 $$
-\textnormal{The feature adaptor $\it{G}_\theta$ which is made of fully-connected layers, takes $o_{h,w}^i$ as input.}
+\textnormal{The feature adaptor $\it{G}_\theta$ which is made of fully-connected layers, takes the output of the feature extractor.}
 $$ 
 
 

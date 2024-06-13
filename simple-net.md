@@ -70,6 +70,12 @@ $$
 q_{h,w}^{i-} =  q_{h,w}^{i} + \mathcal{N}(\mu, \sigma^2)
 $$
 
+Where 
+
+$$
+q_{h,w}^{i} = \it{G}_\theta(o_{h,w}^{i})
+$$
+
 ### Discriminator
 
 

@@ -73,7 +73,7 @@ $$
 Where 
 
 $$
-q_{h,w}^{i} = \it{G}_\theta(o_{h,w}^{i})
+\textnormal{$q_{h,w}^{i}$ is the output of $\it{G}_\theta$}
 $$
 
 ### Discriminator

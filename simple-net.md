@@ -59,10 +59,10 @@ Knowing that real application data distribution are quite different from those o
 
 $$
 \textnormal{The feature adaptor $\it{G}_\theta$ is made of fully-connected layers:}
-$$
+$$ \\
 
 $$
-\textnormal{The output is $q_{h,w}^i = \it{G}_{\theta}(o_{h,w}^i)$}
+\textnormal{$q_{h,w}^i = \it{G}_{\theta}(o_{h,w}^i)$}
 $$
 
 

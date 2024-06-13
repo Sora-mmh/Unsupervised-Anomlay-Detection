@@ -61,7 +61,7 @@ $$
 \textnormal{The feature adaptor $\it{G}_\theta$ is made of fully-connected layers:}
 $$ 
 
-The adaptor function is modelled as follows:
+The adaptor function is modelled as follows: \\
 
 $$
 q_{h,w}^i = \it{G}_{\theta}(o_{h,w}^i)

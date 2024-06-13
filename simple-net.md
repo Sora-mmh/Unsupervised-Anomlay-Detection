@@ -78,9 +78,10 @@ $$
 
 ### Discriminator
 
+The Discriminator functions as a normality scorer, directly estimating normality at each location (h, w). During training, both normal features and generated negative samples are fed to the Discriminator. It produces positive outputs for normal features and negative outputs for anomalous features. A simple 2-layer multi-layer perceptron (MLP) structure is used for this task.
 
 
-Here's an overview of training one epoch of the entire chain:
+Here's an overview of the entire chain:
 
 <img src="figures/simple-net/algo.png" alt="drawing" width="400"/>
 

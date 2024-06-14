@@ -32,7 +32,7 @@ The term "reverse" stems from the fact that the student network has an architect
 
 The primary link between the teacher and student in reverse KD is the OCBE module (One-Class Bottleneck Embedding) (in the figure below). 
 
-<img src="figures/reverse-kd/overview.png" alt="drawing" width="700"/>
+<img src="figures/reverse-kd/overview.png" alt="drawing" width="400"/>
 
 The rich features extracted from the teacher model are often highly redundant, which can hinder the student model when decoding essential anomaly-free features. To address this issue, an OCBE module is introduced to project the teacher’s high-dimensional representations into lower-dimensional ones, preventing the propagation of unusual fluctuations to the student model.
 

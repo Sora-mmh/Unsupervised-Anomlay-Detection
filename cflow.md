@@ -37,19 +37,19 @@ The term **normalizing flow** can be understood as follows:
 
 $$
 x = f(z), x\in X, z \in Z 
-$$\\
+$$
 
 $$
 \textnormal{Using change of variable to ensure the normalization of two distributions densities $X$ and $Z$: }
-$$\\
+$$
 
 $$
 p_Xdx = p_Zdz \rightarrow p_X = p_Z\frac{dz}{dx} 
-$$\\
+$$
 
 $$
 \textnormal{Now, the marginal likelihood $p(x)$ after an invertible tranfsormation $f^{-1}$ is given by:} 
-$$\\
+$$
 
 $$
 p_{X}(x, \theta) = p_{Z}(f_\theta^{-1}(x)) |det(\frac{\partial f_\theta^{-1}(x)}{\partial x})|

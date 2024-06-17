@@ -65,7 +65,8 @@ It is important to note that, unlike autoregressive models and variational autoe
 
 ### Decoder
 
-## Objectives
+<img src="figures/cflow/pipeline.png" alt="drawing" width="600"/>
 
-because positional information allows to incorporate spatial prior to the model. For example, the model with such prior can learn how anomaly features should be arranged on the image.
+
+Each pooling layer activation is passed to an ecoder block, combined with a conditional vector using 2D of sinusoidal positional embedding. Like this we can allow to incorporate spatial prior to the model. For example, the model with such prior can learn how anomaly features should be arranged on the image. The decoder contains a sequence of conventional coupling layers with the additional conditional input (positional embedding).
 

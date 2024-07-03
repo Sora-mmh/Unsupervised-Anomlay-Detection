@@ -70,3 +70,14 @@ It is important to note that, unlike autoregressive models and variational autoe
 
 Each pooling layer activation is passed to an ecoder block, combined with a conditional vector using 2D of sinusoidal positional embedding. Like this we can allow to incorporate spatial prior to the model. For example, the model with such prior can learn how anomaly features should be arranged on the image. The decoder contains a sequence of conventional coupling layers with the additional conditional input (positional embedding).
 
+## Reproduce Cflow results on **Carpet** class
+
+<img src="sota_models/cflow-ad/outputs/mvtec_wide_resnet50_2_freia-cflow_pl3_cb8_inp256_run0_carpet/images_2024-07-03-10:02:01/00000000.png" alt="drawing" width="600"/>
+
+<img src="sota_models/cflow-ad/outputs/mvtec_wide_resnet50_2_freia-cflow_pl3_cb8_inp256_run0_carpet/images_2024-07-03-10:02:01/00000055.png" alt="drawing" width="600"/>
+
+<img src="sota_models/cflow-ad/outputs/mvtec_wide_resnet50_2_freia-cflow_pl3_cb8_inp256_run0_carpet/images_2024-07-03-10:02:01/00000116.png" alt="drawing" width="600"/>
+
+With the histogram of data distribution : 
+
+<img src="sota_models/cflow-ad/outputs/mvtec_wide_resnet50_2_freia-cflow_pl3_cb8_inp256_run0_carpet/hist_images_2024-07-03-10:03:12.png" alt="drawing" width="600"/>

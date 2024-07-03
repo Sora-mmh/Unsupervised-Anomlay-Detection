@@ -74,6 +74,6 @@ Each pooling layer activation is passed to an ecoder block, combined with a cond
 
 Examples of the input images with ground truth anomaly masks (top row) for various classes of the MVTec. The CFLOW-AD model from estimates anomaly score maps (middle row) and generates segmentation masks (bottom row) for a threshold selected to maximize F1-score. The predicted segmentation mask should match the corresponding ground truth as close as possible.
 
-<img src="figures/cflow/00000000.png" alt="drawing" width="50"/> <img src="figures/cflow/00000070.png" alt="drawing" width="50"/> <img src="figures/cflow/00000100.png" alt="drawing" width="50"/> <img src="figures/cflow/00000090.png" alt="drawing" width="50"/> <img src="figures/cflow/00000010.png" alt="drawing" width="50"/> <img src="figures/cflow/00000040.png" alt="drawing" width="50"/> <img src="figures/cflow/00000060.png" alt="drawing" width="50"/> <img src="figures/cflow/00000030.png" alt="drawing" width="50"/>
+<img src="figures/cflow/00000000.png" alt="drawing" width="80"/> <img src="figures/cflow/00000070.png" alt="drawing" width="80"/> <img src="figures/cflow/00000100.png" alt="drawing" width="80"/> <img src="figures/cflow/00000090.png" alt="drawing" width="80"/> <img src="figures/cflow/00000010.png" alt="drawing" width="80"/> <img src="figures/cflow/00000040.png" alt="drawing" width="80"/> <img src="figures/cflow/00000060.png" alt="drawing" width="80"/> <img src="figures/cflow/00000030.png" alt="drawing" width="80"/>
 
 

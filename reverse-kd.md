@@ -44,4 +44,18 @@ The OCBE module mainly comprises two sub-modules:
 <img src="figures/reverse-kd/mff_oce.png" alt="drawing" width="400"/>
 
 
+## Reproduce RD results on **Carpet** class
+
+Visualization on tiny or inconspicuous anomalies on MVTec dataset for the carpet class.
+
+
+<img src="figures/reverse-kd/0_org.png" alt="drawing" width="150"/><img src="figures/reverse-kd/0_ad.png" alt="drawing" width="150"/>
+
+<img src="figures/reverse-kd/1_org.png" alt="drawing" width="150"/><img src="figures/reverse-kd/1_ad.png" alt="drawing" width="150"/>
+
+<img src="figures/reverse-kd/2_org.png" alt="drawing" width="150"/><img src="figures/reverse-kd/2_ad.png" alt="drawing" width="150"/>
+
+<img src="figures/reverse-kd/3_org.png" alt="drawing" width="150"/><img src="figures/reverse-kd/3_ad.png" alt="drawing" width="150"/>
+
+<img src="figures/reverse-kd/4_org.png" alt="drawing" width="150"/><img src="figures/reverse-kd/4_ad.png" alt="drawing" width="150"/>
 

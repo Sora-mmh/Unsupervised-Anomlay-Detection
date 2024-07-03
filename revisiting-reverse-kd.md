@@ -86,3 +86,17 @@ $$
 Here's an overview of training one epoch of the entire chain:
 <img src="figures/revisiting-kd/algo.png" alt="drawing" width="600"/>
     
+## Reproduce RD results on **Carpet** class
+
+Visualization on tiny or inconspicuous anomalies on MVTec dataset for the carpet class.
+
+
+<img src="figures/revisiting-kd/0_org.png" alt="drawing" width="150"/><img src="figures/revisiting-kd/0_ad.png" alt="drawing" width="150"/>
+
+<img src="figures/revisiting-kd/1_org.png" alt="drawing" width="150"/><img src="figures/revisiting-kd/1_ad.png" alt="drawing" width="150"/>
+
+<img src="figures/revisiting-kd/2_org.png" alt="drawing" width="150"/><img src="figures/revisiting-kd/2_ad.png" alt="drawing" width="150"/>
+
+<img src="figures/revisiting-kd/3_org.png" alt="drawing" width="150"/><img src="figures/revisiting-kd/3_ad.png" alt="drawing" width="150"/>
+
+<img src="figures/revisiting-kd/4_org.png" alt="drawing" width="150"/><img src="figures/revisiting-kd/4_ad.png" alt="drawing" width="150"/>

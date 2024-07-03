@@ -91,7 +91,7 @@ Qualitative results, where sampled image, ground truth, and anomaly map are show
 
 <img src="figures/simple-net/screw_test_good_000.png" alt="drawing" width="500">
 <img src="figures/simple-net/screw_test_manipulated_front_002.png" alt="drawing" width="500">
-<img src="sota_models/SimpleNet/results/MVTecAD_Results/simplenet_mvtec/outputs/screw_test_thread_side_002.png" alt="drawing" width="500">
+<img src="figures/simple-net/screw_test_thread_side_002.png" alt="drawing" width="500">
 <img src="figures/simple-net/screw_test_scratch_head_000.png" alt="drawing" width="500"> 
 <img src="figures/simple-net/screw_test_scratch_neck_002.png" alt="drawing" width="500">
 <img src="figures/simple-net/screw_test_thread_top_000.png" alt="drawing" width="500"> 

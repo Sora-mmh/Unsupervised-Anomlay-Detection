@@ -196,7 +196,6 @@ class SwinTransformer(nn.Module):
     # TODO make layers using configs
     def __init__(
         self,
-        num_classes,
         config=[2, 2, 6, 2],
         dim=96,
         drop_path_rate=0.2,
@@ -208,6 +207,7 @@ class SwinTransformer(nn.Module):
         self.head_dim = 32
         self.window_size = 7
         # self.patch_partition = Rearrange('b c (h1 sub_h) (w1 sub_w) -> b h1 w1 (c sub_h sub_w)', sub_h=4, sub_w=4)
+
         # drop path rate for each layer
         dpr = [x.item() for x in torch.linspace(0, drop_path_rate, sum(config))]
 
@@ -279,11 +279,18 @@ class SwinTransformer(nn.Module):
             )
             for i in range(config[3])
         ]
+
         self.block_1 = nn.Sequential(*self.block_1)
         self.block_2 = nn.Sequential(*self.block_2)
         self.block_3 = nn.Sequential(*self.block_3)
         self.block_4 = nn.Sequential(*self.block_4)
+
         self.norm_last = nn.LayerNorm(dim * 8)
+        # self.mean_pool = Reduce("b h w c -> b c", reduction="mean")
+        # self.classifier = (
+        #     nn.Linear(8 * dim, num_classes) if num_classes > 0 else nn.Identity()
+        # )
+
         self.apply(self._init_weights)
 
     def _init_weights(self, m):
@@ -301,7 +308,9 @@ class SwinTransformer(nn.Module):
         out_3 = self.block_3(out_2)
         out_4 = self.block_4(out_3)
         out = self.norm_last(out_4)
-        return out_1, out_2, out_3, out_4, out
+        # x = self.mean_pool(x)
+        # x = self.classifier(x)
+        return [out_1, out_2, out_3, out_4]
 
 
 def SwinTEncoder(config=[2, 2, 6, 2], dim=96, **kwargs):
@@ -316,12 +325,12 @@ def SwinBEncoder(config=[2, 2, 18, 2], dim=128, **kwargs):
     return SwinTransformer(config=config, dim=dim, **kwargs)
 
 
-def SwinLEncoder(num_classes, config=[2, 2, 18, 2], dim=192, **kwargs):
-    return SwinTransformer(num_classes, config=config, dim=dim, **kwargs)
+def SwinLEncoder(config=[2, 2, 18, 2], dim=192, **kwargs):
+    return SwinTransformer(config=config, dim=dim, **kwargs)
 
 
 if __name__ == "__main__":
-    test_model = SwinTEncoder().cuda()
+    test_model = Swin_T().cuda()
     n_parameters = sum(p.numel() for p in test_model.parameters() if p.requires_grad)
     print(test_model)
     dummy_input = torch.rand(1, 3, 448, 448).cuda()

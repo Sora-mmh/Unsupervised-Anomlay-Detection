@@ -8,7 +8,7 @@ from torchvision.io import read_video, write_jpeg
 from torch.utils.data import Dataset
 from torchvision import transforms as T
 
-from data.noise import Simplex_CLASS
+from data.noise import SimplexNoise
 
 __all__ = "RailsDataset"
 
@@ -46,7 +46,7 @@ def get_data_transforms(size, isize):
     return data_transforms, gt_transforms
 
 
-class RailsDataset_train(Dataset):
+class RailsTrainDataset(Dataset):
     def __init__(self, c, transform):
         self.training_dataset_pth = Path(
             "/home/mmhamdi/workspace/unsupervised/Unsupervised-Anomlay-Detection/rails/training"
@@ -57,7 +57,7 @@ class RailsDataset_train(Dataset):
         self.training_frames_pth.mkdir(parents=True, exist_ok=True)
         self.load_videos()
         self.load_annotations()
-        self.simplexNoise = Simplex_CLASS()
+        self.simplexNoise = SimplexNoise()
         self.transform = transform
 
     def __getitem__(self, idx):
@@ -108,7 +108,7 @@ class RailsDataset_train(Dataset):
         self.labels = [0] * len(self.imgs)
 
 
-class RailsDataset_test(Dataset):
+class RailsTestDataset(Dataset):
     def __init__(self, c, transform, mask_transform):
         self.testing_dataset_pth = Path(
             "/home/mmhamdi/workspace/unsupervised/Unsupervised-Anomlay-Detection/rails/testing"
@@ -116,7 +116,7 @@ class RailsDataset_test(Dataset):
         self.testing_frames_pth = self.testing_dataset_pth / "Frames"
         self.load_annotations()
         self.input_shape = (480, 480)
-        self.simplexNoise = Simplex_CLASS()
+        self.simplexNoise = SimplexNoise()
         self.transform = transform
         self.mask_transform = mask_transform
 
@@ -131,7 +131,6 @@ class RailsDataset_test(Dataset):
         mask = cv2.resize(mask, self.input_shape)
         ## Normal
         img = self.transform(img)
-        ## Simplexe Noise
         # mask = Image.fromarray(mask * 255)
         # mask = self.mask_transform(mask)
         # mask = (mask > 0.5).int()

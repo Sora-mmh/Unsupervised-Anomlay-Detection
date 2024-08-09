@@ -2,9 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-import modules as md
-
-from swin_transformer_encoder import SwinTEncoder
+import decoder.modules as md
 
 
 class DecoderBlock(nn.Module):
@@ -130,15 +128,3 @@ class UnetPlusPlusDecoder(nn.Module):
                         previous_depth_plus_one_output,
                     )
         return decoded_outputs[f"X_{0}_{self.layers}"]
-
-
-if __name__ == "__main__":
-    encoder = SwinTEncoder()
-    encoder = encoder.cuda()
-    decoder = UnetPlusPlusDecoder(encoder_channels=[96, 192, 384, 768])
-    decoder = decoder.cuda()
-    img = torch.rand(1, 3, 448, 448).cuda()
-    features = encoder(img)
-    features = [feature.permute(0, 3, 1, 2) for feature in features]
-    output = decoder(features)
-    print(output.size())

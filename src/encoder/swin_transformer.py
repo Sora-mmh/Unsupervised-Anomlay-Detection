@@ -284,13 +284,7 @@ class SwinTransformer(nn.Module):
         self.block_2 = nn.Sequential(*self.block_2)
         self.block_3 = nn.Sequential(*self.block_3)
         self.block_4 = nn.Sequential(*self.block_4)
-
         self.norm_last = nn.LayerNorm(dim * 8)
-        # self.mean_pool = Reduce("b h w c -> b c", reduction="mean")
-        # self.classifier = (
-        #     nn.Linear(8 * dim, num_classes) if num_classes > 0 else nn.Identity()
-        # )
-
         self.apply(self._init_weights)
 
     def _init_weights(self, m):
@@ -308,8 +302,6 @@ class SwinTransformer(nn.Module):
         out_3 = self.block_3(out_2)
         out_4 = self.block_4(out_3)
         out = self.norm_last(out_4)
-        # x = self.mean_pool(x)
-        # x = self.classifier(x)
         return [out_1, out_2, out_3, out_4]
 
 
@@ -327,16 +319,3 @@ def SwinBEncoder(config=[2, 2, 18, 2], dim=128, **kwargs):
 
 def SwinLEncoder(config=[2, 2, 18, 2], dim=192, **kwargs):
     return SwinTransformer(config=config, dim=dim, **kwargs)
-
-
-if __name__ == "__main__":
-    test_model = Swin_T().cuda()
-    n_parameters = sum(p.numel() for p in test_model.parameters() if p.requires_grad)
-    print(test_model)
-    dummy_input = torch.rand(1, 3, 448, 448).cuda()
-    output = test_model(dummy_input)
-    print(output.size())
-    # flops, params = profile(test_model, inputs=(dummy_input, ))
-    # print(params)
-    # print(flops)
-    print(n_parameters)
